@@ -8,12 +8,11 @@
 
 import Foundation
 
-public class ProgrammersRepository:EntityGateway {
-    
+public class ProgrammersRepository: EntityGateway {
     public func fetchProgrammers() -> [Programmer] {
         return [
-            Programmer(name:"Ed", emacs:1, caffein:10, rating:5, lastInterviewDate:Date(), favorite:false),
-            Programmer(name:"Ted M", emacs:1, caffein:10, rating:5, lastInterviewDate:Date(), favorite:true)
+            Programmer(name: "Ed", emacs: 1, caffein: 10, rating: 5, lastInterviewDate: Date(), favorite: false),
+            Programmer(name: "Ted M", emacs: 1, caffein: 10, rating: 5, lastInterviewDate: Date(), favorite: true),
         ]
     }
 }

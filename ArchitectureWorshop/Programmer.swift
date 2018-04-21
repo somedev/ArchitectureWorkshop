@@ -9,10 +9,10 @@
 import Foundation
 
 public struct Programmer {
-    public let name:String
-    public let emacs:Int
-    public let caffein:Int
-    public let rating:Int
-    public let lastInterviewDate:Date
-    public let favorite:Bool
+    public let name: String
+    public let emacs: Int
+    public let caffein: Int
+    public let rating: Int
+    public let lastInterviewDate: Date
+    public let favorite: Bool
 }

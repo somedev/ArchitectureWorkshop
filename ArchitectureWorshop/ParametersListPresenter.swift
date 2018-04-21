@@ -1,4 +1,4 @@
-    //
+//
 //  File.swift
 //  ArchitectureWorshop
 //
@@ -8,28 +8,27 @@
 
 import Foundation
 
-public final class ParametersListPresenter:ProgrammersListPresentation {
-    
-    private var programmersData:[ProgrammersDisplayData] = []
-    public var useCase:ShowProgrammersListUsecaseType? = nil
-    public weak var view:ShowProgrammersView? = nil
+public final class ParametersListPresenter: ProgrammersListPresentation {
+    private var programmersData: [ProgrammersDisplayData] = []
+    public var useCase: ShowProgrammersListUsecaseType?
+    public weak var view: ShowProgrammersView?
 
-    //MARK: - ProgrammersListPresentation
-    
-    public func presentParamers(p:[ProgrammersDisplayData]) {
+    // MARK: - ProgrammersListPresentation
+
+    public func presentParamers(p: [ProgrammersDisplayData]) {
         programmersData = p
         view?.show()
     }
-    
+
     public func getCout() -> Int {
         return programmersData.count
     }
-    
+
     public func viewCreated() {
         useCase?.showProgrammers()
     }
-    
-    public func configure(holder:ProgrammerViewHolder, position:Int){
+
+    public func configure(holder: ProgrammerViewHolder, position: Int) {
         let data = programmersData[position]
         holder.displayDate(d: data.lastInterviewDate)
         holder.displayName(n: data.name)

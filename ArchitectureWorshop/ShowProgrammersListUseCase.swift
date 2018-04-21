@@ -8,26 +8,23 @@
 
 import Foundation
 
+public class ShowProgrammersListUseCase: ShowProgrammersListUsecaseType {
+    private let entityGateway: EntityGateway
+    private weak var presenter: ProgrammersListPresentation?
 
-public class ShowProgrammersListUseCase:ShowProgrammersListUsecaseType {
-    
-    private let entityGateway:EntityGateway
-    private weak var presenter:ProgrammersListPresentation?
-    
-    public init(entityGateway:EntityGateway, presenter:ProgrammersListPresentation) {
+    public init(entityGateway: EntityGateway, presenter: ProgrammersListPresentation) {
         self.entityGateway = entityGateway
         self.presenter = presenter
     }
-    
-    public func showProgrammers() {
-        
-        //grab
-        let programmers = entityGateway.fetchProgrammers()
-        
-        //process
-        let programmersToShow:[ProgrammersDisplayData] = programmers.flatMap({p in return ProgrammersDisplayData(programmer:p)})
 
-        //pass to presenter
+    public func showProgrammers() {
+        // grab
+        let programmers = entityGateway.fetchProgrammers()
+
+        // process
+        let programmersToShow: [ProgrammersDisplayData] = programmers.flatMap({ p in ProgrammersDisplayData(programmer: p) })
+
+        // pass to presenter
         presenter?.presentParamers(p: programmersToShow)
     }
 }

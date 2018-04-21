@@ -8,9 +8,9 @@
 
 import Foundation
 
-public protocol ProgrammersListPresentation:class {
-    func presentParamers(p:[ProgrammersDisplayData])
+public protocol ProgrammersListPresentation: class {
+    func presentParamers(p: [ProgrammersDisplayData])
     func viewCreated()
     func getCout() -> Int
-    func configure(holder:ProgrammerViewHolder, position:Int)
+    func configure(holder: ProgrammerViewHolder, position: Int)
 }

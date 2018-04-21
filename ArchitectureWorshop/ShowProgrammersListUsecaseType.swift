@@ -8,6 +8,6 @@
 
 import Foundation
 
-public protocol ShowProgrammersListUsecaseType:class {
+public protocol ShowProgrammersListUsecaseType: class {
     func showProgrammers()
 }

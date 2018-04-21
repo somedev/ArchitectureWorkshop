@@ -8,35 +8,34 @@
 
 import UIKit
 
-class ProgrammeCell: UITableViewCell,ProgrammerViewHolder {
-    
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var favoriteSwitch: UISwitch!
-    
+class ProgrammeCell: UITableViewCell, ProgrammerViewHolder {
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var dateLabel: UILabel!
+    @IBOutlet var favoriteSwitch: UISwitch!
+
     override func prepareForReuse() {
         super.prepareForReuse()
-        self.nameLabel.text = nil
-        self.dateLabel.text = nil
-        self.favoriteSwitch.isOn = false
+        nameLabel.text = nil
+        dateLabel.text = nil
+        favoriteSwitch.isOn = false
     }
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.selectionStyle = .none
+        selectionStyle = .none
     }
-    
-    //ProgrammerViewHolder
-    func displayName(n:String) {
+
+    // ProgrammerViewHolder
+    func displayName(n: String) {
         nameLabel.text = n
     }
-    
-    func displayDate(d:Date) {
+
+    func displayDate(d: Date) {
         let utils = DateFormatUtils(date: d)
         dateLabel.text = utils.dateString
     }
-    
-    func showFaworite(f:Bool) {
+
+    func showFaworite(f: Bool) {
         favoriteSwitch.isOn = f
     }
 }

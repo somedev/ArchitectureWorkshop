@@ -9,11 +9,11 @@
 import Foundation
 
 public struct ProgrammersDisplayData {
-    let name:String
-    let isFavorite:Bool
-    let lastInterviewDate:Date
-    
-    public init(programmer:Programmer) {
+    let name: String
+    let isFavorite: Bool
+    let lastInterviewDate: Date
+
+    public init(programmer: Programmer) {
         name = programmer.name
         isFavorite = programmer.favorite
         lastInterviewDate = programmer.lastInterviewDate

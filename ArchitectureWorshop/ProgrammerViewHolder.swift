@@ -9,7 +9,7 @@
 import Foundation
 
 public protocol ProgrammerViewHolder {
-    func displayName(n:String)
-    func displayDate(d:Date)
-    func showFaworite(f:Bool)
+    func displayName(n: String)
+    func displayDate(d: Date)
+    func showFaworite(f: Bool)
 }

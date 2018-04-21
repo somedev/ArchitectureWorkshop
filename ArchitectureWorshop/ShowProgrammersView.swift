@@ -8,6 +8,6 @@
 
 import Foundation
 
-public protocol ShowProgrammersView:class {
+public protocol ShowProgrammersView: class {
     func show()
 }

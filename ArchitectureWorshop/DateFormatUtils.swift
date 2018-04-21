@@ -9,18 +9,16 @@
 import Foundation
 
 public class DateFormatUtils {
-    
-    private let date:Date
-    private let formater:DateFormatter
-    
-    
-    init(date:Date) {
+    private let date: Date
+    private let formater: DateFormatter
+
+    init(date: Date) {
         self.date = date
         formater = DateFormatter()
         formater.dateFormat = "dd:MM:YYYY HH:mm"
     }
-    
-    public var dateString:String {
+
+    public var dateString: String {
         return formater.string(from: date)
     }
 }
